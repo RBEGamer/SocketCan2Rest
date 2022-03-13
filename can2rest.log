@@ -1,0 +1,38 @@
+arguments: /home/prodevmo/Desktop/OSMRI/src/src_caninterface/can2rest/can2rest
+Current dir: /home/prodevmo/Desktop/OSMRI/src/src_caninterface
+File verbosity level: -1
+date       time         ( uptime  ) [ thread name/id ]                   file:line     v| 
+2022-03-03 13:53:55.847 (   0.000s) [main thread     ]           can2rest.cpp:126   WARN| --- CREATE LOCAL CONFIG FILE -----
+2022-03-03 13:53:55.847 (   0.000s) [main thread     ]           can2rest.cpp:127   WARN| PROD_V2 HARDWARE MAYBE
+2022-03-03 13:53:55.847 (   0.000s) [main thread     ]           can2rest.cpp:132    ERR| WRITE NEW CONFIGFILE DUE MISSING ONE
+2022-03-03 13:53:55.849 (   0.001s) [main thread     ]    redis_interface.cpp:70    WARN| redis_interface::set_hash_prefix prefox is empty
+2022-03-03 13:53:55.849 (   0.001s) [main thread     ]           can2rest.cpp:238    ERR| Cannot open can socket!
+Stack trace:
+7       0x5633c05ca1ce /home/prodevmo/Desktop/OSMRI/src/src_caninterface/can2rest/can2rest(+0x101ce) [0x5633c05ca1ce]
+6       0x7f699f1740b3 __libc_start_main + 243
+5       0x5633c066c796 /home/prodevmo/Desktop/OSMRI/src/src_caninterface/can2rest/can2rest(+0xb2796) [0x5633c066c796]
+4       0x5633c066b6bc /home/prodevmo/Desktop/OSMRI/src/src_caninterface/can2rest/can2rest(+0xb16bc) [0x5633c066b6bc]
+3       0x5633c0629608 /home/prodevmo/Desktop/OSMRI/src/src_caninterface/can2rest/can2rest(+0x6f608) [0x5633c0629608]
+2       0x7f699f436917 std::thread::join() + 23
+1       0x7f699f611aab /lib/x86_64-linux-gnu/libpthread.so.0(+0xaaab) [0x7f699f611aab]
+0       0x7f699f61c3c0 /lib/x86_64-linux-gnu/libpthread.so.0(+0x153c0) [0x7f699f61c3c0]
+2022-03-03 13:53:55.849 (   0.001s) [main thread     ]                       :0     FATL| Signal: SIGSEGV
+  INFO| .   CONFIG FILE LOADED
+2022-03-03 13:53:55.848 (   0.001s) [main thread     ]  can_frame_to_json.cpp:13    INFO| .   can_frame_to_json::register_conversion REGISTER FOR ID 200 TYPE INT
+2022-03-03 13:53:55.849 (   0.001s) [main thread     ]           rest_api.cpp:46    INFO| .   rest_api start thread
+2022-03-03 13:53:55.849 (   0.001s) [main thread     ]    redis_interface.cpp:70    WARN| .   redis_interface::set_hash_prefix prefox is empty
+2022-03-03 13:53:55.849 (   0.001s) [main thread     ]    redis_interface.cpp:84    INFO| .   redis_interface::set_hash_prefix set prefix to CAN_
+2022-03-03 13:53:55.849 (   0.001s) [main thread     ]    redis_interface.cpp:37    INFO| .   redis_interface start thread
+2022-03-03 13:53:55.849 (   0.001s) [main thread     ]           can2rest.cpp:230   INFO| .   { CAN2REST STARTED
+2022-03-03 13:53:55.849 (   0.001s) [main thread     ]           can2rest.cpp:238    ERR| .   .   Cannot open can socket!
+2022-03-03 13:53:55.849 (   0.001s) [main thread     ]           can2rest.cpp:71    INFO| .   .   cleanup
+Stack trace:
+7       0x5633c05ca1ce /home/prodevmo/Desktop/OSMRI/src/src_caninterface/can2rest/can2rest(+0x101ce) [0x5633c05ca1ce]
+6       0x7f699f1740b3 __libc_start_main + 243
+5       0x5633c066c796 /home/prodevmo/Desktop/OSMRI/src/src_caninterface/can2rest/can2rest(+0xb2796) [0x5633c066c796]
+4       0x5633c066b6bc /home/prodevmo/Desktop/OSMRI/src/src_caninterface/can2rest/can2rest(+0xb16bc) [0x5633c066b6bc]
+3       0x5633c0629608 /home/prodevmo/Desktop/OSMRI/src/src_caninterface/can2rest/can2rest(+0x6f608) [0x5633c0629608]
+2       0x7f699f436917 std::thread::join() + 23
+1       0x7f699f611aab /lib/x86_64-linux-gnu/libpthread.so.0(+0xaaab) [0x7f699f611aab]
+0       0x7f699f61c3c0 /lib/x86_64-linux-gnu/libpthread.so.0(+0x153c0) [0x7f699f61c3c0]
+2022-03-03 13:53:55.849 (   0.001s) [main thread     ]                       :0     FATL| Signal: SIGSEGV

@@ -1,0 +1,5 @@
+# ninja log v5
+0	124	1645453862524396527	CMakeFiles/socketcan_cpp.dir/src/socketcan_cpp.cpp.o	20c1c6a64132bf44
+0	155	1645453862552396237	CMakeFiles/read_write.dir/examples/read_write.cpp.o	c947e25bfdf16f17
+125	129	1645453862528396486	libsocketcan_cpp_d.a	616a7099a655b6ac
+155	187	1645453862584395906	read_write_d	2a457644c96ccf5c

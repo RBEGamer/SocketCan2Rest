@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="RemoteTargetsManager">
+    <targets>
+      <target name="pi@192.168.178.88:22" type="ssh/sftp" uuid="8bcaf4ee-298c-4144-adb0-309b3429f437">
+        <config>
+          <option name="projectRootOnTarget" value="$PROJECT_DIR$/../../../../../../pi/OSMRI/src/src_caninterface/can2rest" />
+          <option name="serverName" value="pi@192.168.178.88:22 agent" />
+          <option name="useRsync" value="true" />
+        </config>
+      </target>
+    </targets>
+  </component>
+</project>
