@@ -40,7 +40,7 @@
 #endif
 
 #define LOG_FILE_PATH "./can2rest.log"
-#define LOG_FILE_PATH_ERROR "./can2rest.log"
+#define LOG_FILE_PATH_ERROR "./can2rest_error.log"
 #define CONFIG_FILE_PATH "./can2rest_config.ini"
 
 #define SYNC_FRAME_ID 42
