@@ -25,22 +25,22 @@ Not required, but needed for can interface configuratio, if you want to use the 
 
 ```bash
 # BUILD CAN-UTILS
-$ cd ./can-utils
+$ cd .src/can-utils
 $ make
 $ make install
 $ make clean
-$ cd ..
+$ cd ../..
 ```
 ### libsocketcan
 ```bash
 # BUILD LIBSOCKET CAN
-$ cd ./libsocketcan
+$ cd ./src/libsocketcan
 $ ./autogen.sh
 $ ./configure
 $ make
 $ make install
 $ make clean
-$ cd ..
+$ cd ../..
 ```
 
 
@@ -48,7 +48,7 @@ $ cd ..
 ```bash
 
 # BUILD
-$ cd ./can2rest/
+$ cd ./src/can2rest/
 $ cmake .
 $ make
 $ chmod +x ./can2rest
