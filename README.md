@@ -25,7 +25,7 @@ Not required, but needed for can interface configuratio, if you want to use the 
 
 ```bash
 # BUILD CAN-UTILS
-$ cd .src/can-utils
+$ cd ./src/can-utils
 $ make
 $ make install
 $ make clean
@@ -235,8 +235,8 @@ $ curl -X POST https://reqbin.com/echo/post/json -H 'Content-Type: application/j
 ## BUILD CAN-UTILS AND INSTALL UDEV RULE FOR USBTIN (USB2CAN Adapter)
 ## IT ALSO INSTALLS A SERVICE FOR AUTOSTART THE CAN2REST APPLICATION
 
-$ export OSMRI_GIT_DIR=/home/prodevmo/Desktop/OSMRI #GIT CLONE ROOT FOLDER
-$ sudo -E bash ./install_can_utils_and_usbtin.sh
+$ export OSMRI_GIT_DIR=/home/CAN2REST #GIT CLONE ROOT FOLDER (this folder)
+$ sudo -E bash ./src/install_can_utils_and_usbtin.sh
 
 ```
 
