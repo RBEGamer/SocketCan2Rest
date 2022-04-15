@@ -77,5 +77,6 @@ cp ./init_usbtin.sh $CAN2REST_INSTALL_DIR/init_usbtin.sh
 
 # ENABLE SERVICE
 systemctl enable can2rest
+systemctl start can2rest
 sleep 10
 systemctl status can2rest

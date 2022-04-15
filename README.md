@@ -203,7 +203,7 @@ $ curl -X POST https://reqbin.com/echo/post/json -H 'Content-Type: application/j
 ```bash
 export CAN2REST_INSTALL_DIR=/home/$USER/can2rest
 cd ./service
-sudo bash ./install_service.sh
+sudo bash -E ./install_service.sh
 ```
 
 ## SERVICE TEST

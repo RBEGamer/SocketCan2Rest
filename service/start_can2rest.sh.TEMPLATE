@@ -5,12 +5,14 @@ cd "$(dirname "$0")"
 pwd
 
 # CREATE CAN DEVICE
-./init_usbtin.sh
+
 
 touch ./LOCK
 while true; do
 	FILEA=./LOCK
 	if test -f "$FILEA"; then
+		echo "INIT USBTIN"
+		./init_usbtin.sh
     	echo "STARTING CAN2REST"
 		./can2rest
 		sleep 10
