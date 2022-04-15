@@ -12,7 +12,7 @@ sudo apt install automake autoconf libtool cmake -y
 
 
 echo "INSTALLATION DIR"
-echo "${OSMRI_GIT_DIR}"
+echo "${CAN2RESTDIR}"
 
 # INSTALL USBtin RULE
 cp ./99-usbtin.rules /etc/udev/rules.d/
@@ -94,7 +94,7 @@ cd ..
 # CREATE SERVICE FILE
 pwd
 cp ./can2rest_template.service ./can2rest.service
-sed -i -e 's|_OSMRI_GIT_DIR_|'$OSMRI_GIT_DIR'|' ./can2rest.service
+sed -i -e 's|_CAN2RESTDIR_|'$CAN2RESTDIR'|' ./can2rest.service
 
 
 # INSTALL SERVICE
@@ -108,4 +108,4 @@ systemctl enable can2rest
 # MODIFY CAN2REST START FILE
 cp ./start_can2rest_template.sh ./start_can2rest.sh
 chmod +x ./start_can2rest.sh
-sed -i -e 's|_OSMRI_GIT_DIR_|'$OSMRI_GIT_DIR'|' ./start_can2rest.sh
+sed -i -e 's|_CAN2RESTDIR_|'$CAN2RESTDIR'|' ./start_can2rest.sh
