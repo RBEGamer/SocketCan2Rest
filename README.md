@@ -19,9 +19,7 @@ It supports can frame filtering in software and automatic type conversion (int16
 
 ## REQUIRED LIBS
 
-### CAN-UTILS
-
-Not required, but needed for can interface configuratio, if you want to use the can2rest.service.
+### INSTALL REQUIRED LIBS: CAN-UTILS, HIREDIS, LIBSOCKETCAN
 
 ```bash
 cd ./libs && sudo bash ./install_can_utils_and_usbtin.sh
@@ -32,7 +30,7 @@ cd ./libs && sudo bash ./install_can_utils_and_usbtin.sh
 ```bash
 
 # BUILD
-$ cd ./src/can2rest/
+$ cd ./src/
 $ cmake .
 $ make
 $ chmod +x ./can2rest
