@@ -1,0 +1,17 @@
+[Unit]
+Description=CAN2REST
+Requires=network-online.target
+After=network-online.target
+Before=
+
+[Service]
+Type=simple
+
+WorkingDirectory=_CAN2REST_INSTALL_DIR_
+
+ExecStart=_CAN2REST_INSTALL_DIR_/can2rest
+StandardOutput=journal
+TimeoutStopSec=10
+
+[Install]
+WantedBy=multi-user.target

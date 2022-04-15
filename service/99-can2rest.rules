@@ -2,4 +2,3 @@
 SUBSYSTEM=="tty", ATTRS{idVendor}=="04d8", ATTRS{idProduct}=="000a", SYMLINK+="ttyCAN"
 # Bus 001 Device 005: ID 04d8:0053 Microchip Technology, Inc. Chuangxin Tech USBCAN/CANalyst-II
 SUBSYSTEM=="tty", ATTRS{idVendor}=="04d8", ATTRS{idProduct}=="0053", SYMLINK+="ttyCAN"
-
