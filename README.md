@@ -28,21 +28,15 @@ sudo apt-get install raspberrypi-kernel-headers
 
 sudo apt install -y libsocketcan-dev can-utils net-tools
 # INSTALL NEEDED TOOLS FOR BUILDING CAN2REST SOFTWARE
-sudo apt install automake autoconf libtool cmake -y
+sudo apt install -y automake autoconf libtool cmake
 # BUILD DEPENDENCIES
-cd ./libs && sudo bash ./install_libs.sh
+cd ./libs && sudo bash ./install_libs.sh && cd ..
 ```
 
 
 ## BUILD CAN2REST
 ```bash
-
-# BUILD
-$ cd ./src/
-$ cmake .
-$ make
-$ chmod +x ./can2rest
-
+cd ./src && bash ./build_can2rest.sh && cd ..
 ```
 
 # RUN CAN2REST

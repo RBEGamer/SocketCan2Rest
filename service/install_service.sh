@@ -13,7 +13,7 @@ if [ "$EUID" -ne 0 ]
 fi
 
 if [[ -z "${CAN2REST_INSTALL_DIR}" ]]; then
-  export CAN2REST_INSTALL_DIR=/usr/can2rest
+  export CAN2REST_INSTALL_DIR=/home/$USER/can2rest
 fi
 
 echo "INSTALLATION DIR"

@@ -12,7 +12,7 @@ while true; do
 	FILEA=./LOCK
 	if test -f "$FILEA"; then
     	echo "STARTING CAN2REST"
-		can2rest
+		./can2rest
 		sleep 10
 	else
 	    	exit 1
