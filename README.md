@@ -24,23 +24,7 @@ It supports can frame filtering in software and automatic type conversion (int16
 Not required, but needed for can interface configuratio, if you want to use the can2rest.service.
 
 ```bash
-# BUILD CAN-UTILS
-$ cd ./src/can-utils
-$ make
-$ make install
-$ make clean
-$ cd ../..
-```
-### libsocketcan
-```bash
-# BUILD LIBSOCKET CAN
-$ cd ./src/libsocketcan
-$ ./autogen.sh
-$ ./configure
-$ make
-$ make install
-$ make clean
-$ cd ../..
+cd ./libs && sudo bash ./install_can_utils_and_usbtin.sh
 ```
 
 
@@ -112,33 +96,21 @@ $ $ cat ./can2rest_config.ini
 # CAN_CONVERSION_<ID>=STR
 # CAN_CONVERSION_<ID>=BOOL
 # CAN_CONVERSION_<ID>=BYTE
-
-
-
 [SETTINGS]
 CAN_SOCKET_IF_NAME=can0
-
-
 # ENABLE PACKET_FILTER FOR 207 => ONLY FRAMES WITH ID 207 WILL BE PROCESSED
 CAN_DISABLE_PACKET_FILTER=0
 CAN_FILTER_207=1
-
 # DISABLE PACKET_FILTER
 CAN_DISABLE_PACKET_FILTER=1
-
-
 # ENABLE ATUOMATIC TYPE CONVERSION FOR FRAME ID 207 TO 16BIT INT
 CAN_CONVERSION_207=INT
-
 # ENABLE ATUOMATIC TYPE CONVERSION FOR FRAME ID 207 TO BOOL
 CAN_CONVERSION_208=BOOL
-
-
 # REST CONFIG
 REST_WEBSERVER_ENABLE=1
 REST_WEBSERVER_BIND_PORT=4242
 REST_WEBSERVER_BIND_HOST=0.0.0.0
-
 # REDIS CONFIG
 REDIS_ENABLE=1
 REDIS_HOST=127.0.0.1
@@ -146,8 +118,6 @@ REDIS_PORT=6379
 REDIS_FIELD_PREFIX=
 REDIS_ENABLE_WRITE=0
 REDIS_HASH_NAME=CAN_
-
-
 ```
 
 
@@ -228,16 +198,12 @@ $ curl -X POST https://reqbin.com/echo/post/json -H 'Content-Type: application/j
 
 
 
-## INSTALL LIBRARIES, SETUP UDEV RULES, INSTALL SERVICE
-
+## INSTALL SERVICE
 
 ```bash
-## BUILD CAN-UTILS AND INSTALL UDEV RULE FOR USBTIN (USB2CAN Adapter)
-## IT ALSO INSTALLS A SERVICE FOR AUTOSTART THE CAN2REST APPLICATION
-
-$ export OSMRI_GIT_DIR=/home/CAN2REST #GIT CLONE ROOT FOLDER (this folder)
-$ sudo -E bash ./src/install_can_utils_and_usbtin.sh
-
+export CAN2REST_INSTALL_DIR=/home/$USER/can2rest
+cd ./service
+sudo bash ./install_service.sh
 ```
 
 ## SERVICE TEST

@@ -3,7 +3,6 @@
 echo "-- BUILD CAN2REST ----"
 # BUILD CAN2REST PROGRAM
 pwd
-cd ./can2rest
 rm CMakeCache.txt && rm -Rf CMakeFiles/
 cmake .
 make
