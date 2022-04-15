@@ -59,9 +59,9 @@ FILE=../src/can2rest
 if [ -f "$FILE" ]; then
     echo "$FILE exists."
 else 
+    echo "BUILDING CAN2REST"
     cd ../src/
-    cmake .
-    make
+    bash ./build_can2rest.sh
     cd ../service/
 fi
 
