@@ -6,11 +6,11 @@ if [ "$EUID" -ne 0 ]
 fi
 
 # INSTALL NEEDED TOOLS
-sudo apt install automake autoconf libtool cmake -y
+#sudo apt install automake autoconf libtool cmake -y
 
 
 #  NET-TOOLS
-sudo apt install net-tools
+#sudo apt install net-tools
 # OR USE SOURCE
 # cd ./net-tools
 #export BINDIR='/usr/bin' SBINDIR='/usr/bin' &&

@@ -22,7 +22,15 @@ It supports can frame filtering in software and automatic type conversion (int16
 ### INSTALL REQUIRED LIBS: CAN-UTILS, HIREDIS, LIBSOCKETCAN
 
 ```bash
-cd ./libs && sudo bash ./install_can_utils_and_usbtin.sh
+
+# RPI ONLY
+sudo apt-get install linux-headers
+
+sudo apt install -y libsocketcan-dev can-utils net-tools
+# INSTALL NEEDED TOOLS FOR BUILDING CAN2REST SOFTWARE
+sudo apt install automake autoconf libtool cmake -y
+# BUILD DEPENDENCIES
+cd ./libs && sudo bash ./install_libs.sh
 ```
 
 
