@@ -8,7 +8,7 @@ while true; do
 	FILEA=/tmp/OSMRI/CAN_LOCK
 	if test -f "$FILEA"; then
     	echo "STARTING OSMIR CAN2REST"
-		_OSMRI_GIT_DIR_/src/src_caninterface/can2rest/can2rest
+		_CAN2RESTDIR_/src/src_caninterface/can2rest/can2rest
 		sleep 10
 	else
 	    	exit 1
