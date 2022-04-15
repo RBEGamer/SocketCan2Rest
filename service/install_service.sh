@@ -67,7 +67,7 @@ fi
 
 
 chmod +x ./start_can2rest.sh
-chmod +x ./init_usbtin
+chmod +x ./init_usbtin.sh
 chmod +x ../src/can2rest
 cp ../src/can2rest $CAN2REST_INSTALL_DIR/can2rest
 cp ./start_can2rest.sh $CAN2REST_INSTALL_DIR/start_can2rest.sh
