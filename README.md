@@ -24,7 +24,7 @@ It supports can frame filtering in software and automatic type conversion (int16
 ```bash
 
 # RPI ONLY
-sudo apt-get install linux-headers
+sudo apt-get install raspberrypi-kernel-headers
 
 sudo apt install -y libsocketcan-dev can-utils net-tools
 # INSTALL NEEDED TOOLS FOR BUILDING CAN2REST SOFTWARE
