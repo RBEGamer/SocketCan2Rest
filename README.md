@@ -199,8 +199,11 @@ $ curl -X POST https://reqbin.com/echo/post/json -H 'Content-Type: application/j
 
 
 ## INSTALL SERVICE
-
 ```bash
+# NOTE: CHANGE ./service/start_can2rest.sh FOR CAN INTERFACE CONFIG
+## SUCH AS SPEED AND OTHER PARAMETERS
+
+
 export CAN2REST_INSTALL_DIR=/home/$USER/can2rest
 cd ./service
 sudo bash -E ./install_service.sh
