@@ -4,13 +4,15 @@ cd "$(dirname "$0")"
 
 pwd
 
-mkdir -p /tmp/CAN2REST/
-touch /tmp/CAN2REST/LOCK
+# CREATE CAN DEVICE
+./init_usbtin.sh
+
+touch ./LOCK
 while true; do
-	FILEA=/tmp/OSMRI/LOCK
+	FILEA=./LOCK
 	if test -f "$FILEA"; then
     	echo "STARTING CAN2REST"
-		_CAN2REST_INSTALL_DIR_/can2rest
+		can2rest
 		sleep 10
 	else
 	    	exit 1

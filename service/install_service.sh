@@ -67,7 +67,7 @@ fi
 
 cp ../src/can2rest $CAN2REST_INSTALL_DIR/can2rest
 cp ./start_can2rest.sh $CAN2REST_INSTALL_DIR/start_can2rest.sh
-
+cp ./init_usbtin.sh $CAN2REST_INSTALL_DIR/init_usbtin.sh
 
 
 
