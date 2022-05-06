@@ -12,6 +12,7 @@ WorkingDirectory=_CAN2REST_INSTALL_DIR_
 ExecStart=_CAN2REST_INSTALL_DIR_/start_can2rest.sh
 StandardOutput=journal
 TimeoutStopSec=10
+Restart=always
 
 [Install]
 WantedBy=multi-user.target
