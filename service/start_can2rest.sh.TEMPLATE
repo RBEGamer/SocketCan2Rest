@@ -15,10 +15,10 @@ while true; do
 	FILEA=./LOCK
 	if test -f "$FILEA"; then
 		echo "INIT USBTIN"
-		ifconfig can0 down  || true
-		slcan_attach -f -n can0 -s5 -o /dev/ttyCAN
-		slcand ttyCAN can0
-		ifconfig can0 up
+		#ifconfig can0 down  || true
+		slcan_attach -f -n can0 -s5 -o /dev/ttyCAN || true
+		slcand ttyCAN can0 || true
+		ifconfig can0 up || true
 
 
     	echo "STARTING CAN2REST"
